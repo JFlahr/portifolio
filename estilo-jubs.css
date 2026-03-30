@@ -1,0 +1,96 @@
+/* estilo-jubs.css - Design System Portfólio Juliana Flahr */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Mono", monospace;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar Fixa (Menu Esquerdo) */
+#Q3814680936 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100vh;
+    padding: 5rem 0 5rem 5rem;
+    box-sizing: border-box;
+}
+
+#Q3814680936 h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+}
+
+.bodycorp-2 {
+    font-size: 1.35rem;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+/* Área Central de Conteúdo (Projetos) */
+.pages {
+    margin-left: 22%;
+    width: 78%;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* Layout das Páginas de Projeto */
+column-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+column-unit {
+    flex: 1;
+    min-width: 300px;
+}
+
+column-unit[span="7"] { flex: 1.4; } /* Proporção da imagem destaque */
+column-unit[span="5"] { flex: 1; }   /* Proporção do texto descritivo */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Grid de Imagens (Home e Galerias) */
+.home-grid, gallery-justify {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
